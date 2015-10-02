@@ -39,14 +39,14 @@
           <table class="table table-striped table-condensed" ts-wrapper>
             <thead>
               <th class="text-left" ts-criteria="LogTitle|lowercase">Quest</th>
-              <th class="text-left" ts-criteria="Minlevel|parseint">MinLevel</th>
-              <th class="text-left" ts-criteria="AllowableRaces|parseint">Races</th>
+              <th class="text-left" ts-criteria="Minlevel|parseInt">Minlevel</th>
+              <th class="text-left" ts-criteria="AllowableRaces|lowercase">Races</th>
             </thead>
-            <tbody>
+            <tbody class="buggedList">
               <tr ng-repeat="quest in quests" ts-repeat>
                 <td class="text-left"><a ng-href="http://wowhead.com/quest={{ quest.ID }}">{{ quest.LogTitle }}</a></td>
                 <td class="text-left">{{ quest.Minlevel }}</td>
-                <td class="text-left">{{ quest.AllowableRaces }}</td>
+                <td class="text-left" ng-bind-html="quest.AllowableRaces"></td>
               </tr>
             </tbody>
           </table>
