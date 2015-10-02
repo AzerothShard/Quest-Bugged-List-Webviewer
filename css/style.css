@@ -1,3 +1,7 @@
+a {
+  text-decoration: none !important;
+}
+
 .buggedList td img {
   margin-right: 5px;
 }

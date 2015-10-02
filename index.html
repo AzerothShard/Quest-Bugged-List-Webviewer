@@ -44,7 +44,7 @@
             </thead>
             <tbody class="buggedList">
               <tr ng-repeat="quest in quests" ts-repeat>
-                <td class="text-left"><a ng-href="http://wowhead.com/quest={{ quest.ID }}">{{ quest.LogTitle }}</a></td>
+                <td class="text-left"><a target="_blank" ng-href="http://wotlk.openwow.com/quest={{ quest.ID }}"><strong>{{ quest.LogTitle }}</strong></a></td>
                 <td class="text-left">{{ quest.Minlevel }}</td>
                 <td class="text-left" ng-bind-html="quest.AllowableRaces"></td>
               </tr>
